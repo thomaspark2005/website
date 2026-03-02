@@ -1,0 +1,621 @@
+@charset "UTF-8";
+
+/* Thanks to w3schools for the help with the flexboxes: https://www.w3schools.com/css/css3_flexbox.asp */
+.flex {
+	display: flex;
+}
+
+.fflat {
+	flex-direction: row;
+}
+
+.ftall {
+	flex-direction: column;
+}
+
+.space {
+	justify-content: space-between;
+}
+
+.spacearound {
+	justify-content: space-around;
+}
+
+.wrap {
+	flex-wrap: wrap;
+}
+
+.mobilewrap {
+	flex-wrap: none;
+}
+
+.stretch {
+	align-items: stretch;
+}
+
+.center {
+	align-items: center;
+}
+
+.flexend {
+	align-items: flex-end;
+}
+
+.based {
+	flex-basis: 100%;
+}
+
+.smallerbased {
+	flex-basis: 75%;
+}
+
+.justifycenter {
+	justify-content: center;
+}
+
+.shrink {
+	flex-shrink: 1.5;
+}
+
+.marginal {
+	margin-left: 10%;
+	margin-right: 10%;
+}
+
+.marginalmarginal {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.marginalmarginalmarginal {
+	margin-left: 2.5%;
+	margin-right: 2.5%;
+}
+
+.marginalvertical {
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+.marginaltop {
+	margin-top: 2.5%;
+}
+
+.blue {
+	color: #3136C4;
+}
+
+.red {
+	color: #cc3e49;
+}
+
+.purple {
+	color: #5b31c4;
+}
+
+.lightgreen {
+	background-color: #81f495;
+}
+
+.tomato {
+	background-color: #F06543;
+}
+
+.lightblue {
+	background-color: #A9DEF9;
+}
+
+.lightpurple {
+	background-color: #9B5DE5;
+}
+
+.buzzblue {
+	background-color: #5271FF;
+}
+
+.buzzblue b {
+	color: white;	
+}
+
+.STEMcolor {
+	background-color: #C2D4E8;
+}
+
+.jaldi {
+	font-family: 'Jaldi', Calibri, Helvetica, "Comic Sans", cursive;
+}
+
+.overlock {
+	font-family: 'Overlock', Calibri, Helvetica, "Comic Sans", cursive;
+}
+
+h1.overlock {
+	font-family: 'Overlock', Calibri, Helvetica, "Comic Sans", cursive;
+	padding-top: 16px;
+}
+
+.abeezee {
+	font-family: 'ABeeZee', Calibri, Helvetica, sans-serif;
+}
+
+/* Thanks to Google Fonts for this Menu Open icon: https://fonts.google.com/icons?selected=Material+Symbols+Outlined:menu_open:FILL@0;wght@400;GRAD@0;opsz@24&icon.platform=web */
+.material-symbols-outlined {
+	font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+	/* Thanks to https://stackoverflow.com/questions/55395192/resizing-google-material-icons-font-size for helping with the size of the menu icon */
+	transition: 0.25s;
+	font-size: 100px !important;
+	position: fixed;
+	top: 0;
+	left: 0;
+	opacity: 1;
+}
+
+.main {
+	margin-top: 300px
+}
+
+/* HUGE thanks to w3schools tutorial which helped me develop this sidemenu that you'll see on each page. For more info: https://www.w3schools.com/howto/howto_js_sidenav.asp */
+
+/* The side navigation menu */
+.sidemenu {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	background-color: #3136C4;
+	/* Thanks to https://stackoverflow.com/questions/17750430/remove-scroll-bar-from-div for suggesting this fix to not show a scroll bar */
+	overflow: hidden;
+	padding-top: 30px;
+	transition: 0.25s;
+	min-width: 0px;
+}
+
+/* The navigation menu links */
+.sidemenu a {
+	padding: 0px 8px 0px 8px;
+	text-decoration: none;
+	font-size: 0em;
+	color: white;
+	display: block;
+	transition: font-size 0.25s, background-color 0.5s, border 0.5s;
+	text-decoration: none;
+	border: 0px;
+	font-family: 'Jaldi', Calibri, Helvetica, "Comic Sans", cursive;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidemenu a:hover {
+	background-color: #8694FE;
+	border: 4px outset #8694FE;
+	border-left: 0px none white;
+}
+
+.sidemenu img {
+	margin: 0px 0px 8px 8px;
+	border-bottom: 4px solid white;
+}
+
+.redmenu {
+	background-color: #cc3e49;
+	height: 100%;
+	border-top: 4px solid #F2DC5D;
+}
+
+.sidemenu .redmenu  a {
+	font-family: 'Overlock', Calibri, Helvetica, "Comic Sans", cursive;
+	padding: 8px 8px 8px 8px;
+}
+
+.sidemenu .redmenu  a:hover, #classmenu a:hover {
+	background-color: #ED5A9E;
+	border: 4px outset #ED5A9E;
+	border-left: 0px none white;
+}
+
+.purplemenu {
+	background-color: #5b31c4 !important;
+	border-top: 4px solid #F2DC5D;
+}
+
+.sidemenu .purplemenu  a {
+	font-family: 'Overlock', Calibri, Helvetica, "Comic Sans", cursive;
+	padding: 8px 8px 8px 8px;
+}
+
+.sidemenu .purplemenu  a:hover {
+	background-color: #9f5aed;
+	border: 4px outset #9f5aed;
+	border-left: 0px none white;
+}
+
+/* The class menu */
+#classmenu {
+	width: 0;
+	position: fixed;
+	z-index: 3;
+	top: 25%;
+	left: 0;
+	background-color: #cc3e49;
+	/* Thanks to https://stackoverflow.com/questions/17750430/remove-scroll-bar-from-div for suggesting this fix to not show a scroll bar */
+	overflow: hidden;
+	transition: 0.25s;
+	min-width: 0px;
+}
+
+#classmenu a {
+	padding: 0px 8px 0px 8px;
+	text-decoration: none;
+	font-size: 0em;
+	color: white;
+	display: block;
+	transition: font-size 0.25s, background-color 0.5s, border 0.5s;
+	text-decoration: none;
+	border: 0px;
+	font-family: 'Overlock', Calibri, Helvetica, "Comic Sans", cursive;
+	padding: 8px 8px 8px 8px;
+}
+
+#colorLayer {
+	height: 100%;
+	width: 0;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.75s, width 0.75s;
+}
+
+.bannerimage {
+	z-index: -1;
+	height: 300px;
+	width: 100%;
+	display: block;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	margin: 0;
+	background-image: url(images/banner/senior.jpeg);
+	background-position: center -275px;	
+	background-size: 100% auto;
+	opacity: 0.6;
+	animation-name: carousel;
+	animation-duration: 120s;
+	animation-iteration-count: infinite;
+}
+
+.banner h1 {
+	text-align: center;
+	margin-top: 4%;
+	margin-bottom: 0;
+	font-size: 6em;
+	font-weight: 900;
+	position: absolute;
+	z-index: 1;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+
+.mainText {
+	margin-left: 100px;
+	margin-right: 100px;
+	padding-top: 50px;
+}
+
+.mainText h1 {
+	text-align: center;
+	margin: 20px;
+	font-family: 'ABeeZee', sans-serif;
+	font-weight: 900;
+	font-size: 2.75em;
+}
+
+.mainText h2 {
+	text-align: center;
+	margin: 10px;
+	font-family: 'ABeeZee', sans-serif;
+	font-weight: 600;
+	font-size: 2.25em;
+}
+
+.mainText h3 {
+	text-align: center;
+	margin: 10px;
+	font-family: 'ABeeZee', sans-serif;
+	font-weight: 500;
+	font-size: 2em;
+}
+
+form h3 {
+	text-align: left !important;
+	margin-right: 0px !important;
+	margin-left: 0px !important;
+	margin-top: 20px !important;
+	margin-bottom: 20px !important;
+}
+
+.mainText p, .prize {
+	text-align: center;
+	font-family: 'ABeeZee', Calibri, Helvetica, sans-serif;
+	font-size: 1.35em;
+	line-height: 1.5;
+}
+
+.mainText p.left, div.left p {
+	text-align: left;
+}
+
+label  {
+	text-align: left;
+	font-family: 'ABeeZee', Calibri, Helvetica, sans-serif;
+	font-size: 1.35em;
+	line-height: 1.5;
+}
+
+a.active, #classmenu a.active {
+	text-decoration: underline;
+	border-left: 0px none white !important;
+}
+
+p.caption, .caption	{
+	font-size: 1.25em;
+}
+
+#blueSidenav a.active {
+	background-color: #8694FE;
+	border: 4px outset #8694FE;
+}
+
+#redSidenav a.active, #classmenu a.active {
+	background-color: #ED5A9E;
+	border: 4px outset #ED5A9E;
+}
+
+#purpleSidenav .purplemenu a.active {
+	background-color: #9f5aed;
+	border: 4px outset #9f5aed;
+}
+
+/* Thanks to https://www.thesitewizard.com/css/hanging-indents.shtml for explaining how to do hanging indents */
+div.hangingindent p {
+	padding-left: 5%;
+	text-indent: -5%;
+}
+
+.normal {
+	text-decoration: none;
+	color: black;
+}
+
+.rounded {
+	border-radius: 25px;
+}
+
+.gradborder {
+	border: 10px solid transparent;
+	border-image: url(images/gradient.png) stretch 30;
+	padding: 2.5%;
+}
+
+.divider {
+	border-bottom: 8px dotted #F2DC5D;
+}
+
+iframe {
+	margin-top: 2.5%;
+	margin-bottom: 2.5%;
+}
+
+.ytbox {
+	background-color: #3136C4;
+	width: 80%;
+	min-width: 900px;
+}
+
+.pdf {
+	width: 90%;
+	height: 600px;
+}
+
+.hideme {
+	margin-left: 20%;
+	font-size: 5em;
+	color: white;
+}
+
+.box {
+	max-width: 50%;
+}
+
+.centertext {
+	text-align: center;
+}
+
+div.no-wrapping-please a {
+	word-wrap: normal;
+}
+
+button {
+	font-size: 2em;
+	font-family: 'ABeeZee', Calibri, Helvetica, sans-serif;
+	margin: 20px;
+	width: 50%;
+	padding: 20px;
+	color: white;
+	background-color: #5b31c4;
+	cursor: pointer;
+	border: 0px solid white;
+	transition: 0.25s;
+	min-width: 200px;
+}
+
+button:hover {
+	text-decoration: underline;
+	background-color: #9f5aed;
+	border: 4px outset #9f5aed;
+}
+
+.mobile-menu-button {
+	display: none !important;
+}
+
+.regularh2 {
+	display: block;
+}
+
+.mobileh2 {
+	display: none;
+}
+
+.mobile-center {
+	justify-content: none;
+}
+
+#growingImage {
+	animation-name: grow-shrink;
+	animation-duration: 1s;
+	animation-iteration-count: infinite;
+	transform: scale(1, 1);
+}
+
+/* Big thanks to w3schools for the animation help: https://www.w3schools.com/css/css3_animations.asp */
+@keyframes carousel	{
+	0%   {background-image: url("images/banner/senior.jpeg");}
+	10%  {background-image: url("images/banner/cats.jpeg"); background-position: center -150px;}
+	20%	 {background-image: url("images/banner/gorge.jpeg"); background-position: center center;}
+	30%  {background-image: url("images/banner/5grade.jpg"); background-position: center -325px;}
+	40%  {background-image: url("images/banner/bournedale.jpeg"); background-position: center -150px;}
+	50%  {background-image: url("images/banner/wah.jpg"); background-position: right -400px;}
+	60%  {background-image: url("images/banner/thepark.jpeg"); background-position: center -300px;}
+	70%  {background-image: url("images/banner/collage.jpeg"); background-position: center center;}
+	80%  {background-image: url("images/banner/alone.jpg"); background-position: center -200px;}
+	90%  {background-image: url("images/banner/philmont2.jpg"); background-position: center center;}
+	100% {background-image: url("images/banner/senior.jpeg");}
+}
+
+@keyframes grow-shrink {
+	0% {
+		transform: scale(0, 0);
+	}
+	50% {
+		transform: scale(1, 1);
+	}
+	100% {
+		transform: scale(0, 0);
+	}
+}
+
+/* Thanks to w3schools for CSS Responsive Websites, even though it made me freak out initally: https://www.w3schools.com/css/css_rwd_mediaqueries.asp */
+/* For mobile */
+@media only screen and (max-width:800px) {
+	.mobile-center {
+		justify-content: center;
+	}
+	.mobilewrap {
+		flex-wrap: wrap;
+	}
+	.regular-menu-button {
+		display: none !important;
+	}
+	.mobile-menu-button {
+		display: inline-block !important;
+		position: static;
+	}
+	.menu-icon-div {
+		width: 100%;
+		height: auto;
+		text-align: center;
+	}
+	#classmenu {
+		z-index: 6;
+	}
+	#colorLayer {
+		z-index: 5;
+		height: 0;
+		width: 100%;
+		transition: opacity 0.75s, height 0.75s;
+	}
+	.bannerimage {
+		height: 220px;
+	}
+	.banner h1 {
+		margin-top: 5%;
+		font-size: 5em;
+	}
+	.toobig {
+		font-size: 3.75em !important;
+	}
+	.main {
+		margin-top: 220px
+	}
+	.mainText {
+		margin-left: 5%;
+		margin-right: 5%;
+		padding-top: 10px;
+	}
+	.mainText h1 {
+		margin: 10px;
+		font-size: 2.5em;
+	}
+	.mainText h2 {
+		margin: 20px;
+		font-size: 2em;
+	}
+	.regularh2 {
+		display: none;
+	}
+	.mobileh2 {
+		display: block;
+	}
+	.mainText p, .prize {
+		font-size: 1.25em;
+	}
+	p.caption, .caption {
+		font-size: 1.25em;
+	}
+	div.hangingindent p {
+		max-width: 50%;
+	}
+	.box {
+		max-width: 75%;
+	}
+	.ytbox {
+		min-width: 300px;
+	}
+	.spinme {
+		animation-name: mobilehello;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+	}
+	iframe, .pdf {
+		height: 200px;
+	}
+	.hideme {
+		font-size: 3em;
+	}
+	/* Thanks to w3schools for helping with the word wrap feature: https://www.w3schools.com/cssref/css3_pr_word-wrap.php*/
+	div.no-wrapping-please a {
+		word-wrap: break-word;
+	}
+	@keyframes mobilehello	{
+		0%	{transform:scaleX(1);}
+		50%	{transform:scaleX(-1);}
+		100%{transform:scaleX(1);}
+	}
+	@keyframes carousel	{
+		0%   {background-image: url("images/banner/senior.jpeg");}
+		10%  {background-image: url("images/banner/cats.jpeg"); background-position: center center;}
+		20%	 {background-image: url("images/banner/gorge.jpeg"); background-position: center center;}
+		30%  {background-image: url("images/banner/5grade.jpg"); background-position: -85px center; background-size: cover;}
+		40%  {background-image: url("images/banner/bournedale.jpeg"); background-position: center center;}
+		50%  {background-image: url("images/banner/wah.jpg"); background-position: right center;}
+		60%  {background-image: url("images/banner/thepark.jpeg"); background-position: center center;}
+		70%  {background-image: url("images/banner/collage.jpeg"); background-position: center center;}
+		80%  {background-image: url("images/banner/alone.jpg"); background-position: center center; background-size: cover;}
+		90%  {background-image: url("images/banner/philmont2.jpg"); background-position: center center; background-size: cover;}
+		100% {background-image: url("images/banner/senior.jpeg");}
+	}
+}
